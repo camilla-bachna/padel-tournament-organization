@@ -8,6 +8,7 @@ function App() {
         <h1 className="header__heading">Welcome to the Padel paradise</h1>
       </header>
       <main className="main">
+        <div className="main__image"></div>
         <form className="main__form">
           <label htmlFor="user" className="main__form--label">
             User
