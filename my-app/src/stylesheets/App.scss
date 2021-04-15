@@ -24,18 +24,24 @@
 }
 
 .main {
+  background-color: rgb(32, 106, 93);
+  width: 100%;
+  height: 85vh;
+  background-image: url('../images/ball.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 800px 800px;
   &__image {
-    background-color: rgb(32, 106, 93);
-    width: 100%;
-    height: 100vh;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    z-index: -1;
-    background-image: url('../images/ball.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 800px 800px;
-    /* animation: main__image 6s ease-in; */
+    right: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    background-color: rgb(255, 255, 77);
+    animation: main__image 2s ease-in;
   }
   &__form {
     display: flex;
@@ -44,8 +50,7 @@
     align-items: center;
     width: 100%;
     height: 85vh;
-    animation: main__form 2s ease-in;
-    /* animation-delay: 6s; */
+    animation: main__form 3s ease-out;
     &--label {
       color: rgb(32, 106, 93);
       font-weight: bold;
@@ -70,19 +75,22 @@
     }
     &--button {
       width: 12%;
-      height: 5vh;
+      height: 6vh;
       margin: 3.5px;
       margin-top: 20px;
       border: 4px solid rgb(90, 90, 90);
-      border-radius: 6px;
+      border-radius: 20px;
       font-size: 35px;
       background-color: rgb(32, 106, 93);
       color: rgb(255, 204, 41);
       font-weight: bold;
-      transition: 0.7s transform ease-in, 0.7s background-color ease-in;
+      transition: 0.7s transform ease-in, 0.7s background-color ease-in,
+        0.7s border-radius ease-in, 0.7s font-size ease-in;
       &:hover {
         background-color: rgb(21, 70, 61);
         transform: scale(1.1);
+        border-radius: 50px;
+        font-size: 37px;
       }
     }
   }
@@ -90,19 +98,39 @@
 
 @keyframes main__image {
   0% {
-    transform: translateY(-1000vh);
+    position: absolute;
+    right: 100%;
+    bottom: 93%;
+    opacity: 1;
+  }
+  50% {
+    right: 75%;
+    bottom: 0%;
+    opacity: 1;
+    transform: scale(5);
+  }
+  75% {
+    right: 62.5%;
+    bottom: 25%;
+    opacity: 0.5;
+    /* transform: scale(6); */
   }
   100% {
-    transform: translateY(0);
+    right: 50%;
+    bottom: 50%;
+    opacity: 0;
+    transform: scale(9);
   }
 }
 
 @keyframes main__form {
   0% {
     opacity: 0;
+    transform: translateY(-1000px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

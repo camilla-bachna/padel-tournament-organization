@@ -5,19 +5,19 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1 className="header__heading">Welcome to the Padel paradise</h1>
+        <h1 className="header__heading">Bienvenido al paraíso del pádel</h1>
       </header>
       <main className="main">
         <div className="main__image"></div>
         <form className="main__form">
           <label htmlFor="user" className="main__form--label">
-            User
+            Usario
           </label>
           <input
             type="text"
             id="user"
             className="main__form--input"
-            placeholder="add username"
+            placeholder="elige cualquier nombre de usuario"
           />
           <label htmlFor="match" className="main__form--label">
             Pin
@@ -26,10 +26,10 @@ function App() {
             type="text"
             id="match"
             className="main__form--input"
-            placeholder="add the game pin"
+            placeholder="añade el pin del Juego"
           />
           <label htmlFor="gender" className="main__form--label">
-            Gender
+            Género
           </label>
           <select
             name="gender"
@@ -37,8 +37,8 @@ function App() {
             value="gender"
             className="main__form--select"
           >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="male">Hombre</option>
+            <option value="female">Mujer</option>
           </select>
           <button type="submit" className="main__form--button">
             Go
@@ -47,9 +47,9 @@ function App() {
       </main>
       <footer className="footer">
         <small className="footer__note">
-          This app is designed to help you find the right court. Just choose
-          your username, add the pin of the match and choose the gender. That's
-          it :)
+          Esta aplicación está diseñada para ayudarte a encontrar el cortejo
+          adecuado. Sólo tienes que elegir tu nombre de usuario, añadir el pin
+          del partido y elegir el género. Ya estaría :)
         </small>
       </footer>
     </>
