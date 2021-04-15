@@ -43,6 +43,8 @@
     background-color: rgb(255, 255, 77);
     animation: main__image 2s ease-in;
   }
+  &__new {
+  }
   &__form {
     display: flex;
     flex-direction: column;
@@ -51,6 +53,24 @@
     width: 100%;
     height: 85vh;
     animation: main__form 3s ease-out;
+    &--new {
+      width: 14%;
+      height: 6vh;
+      margin: -40px 0 3.5px 0;
+      border: 4px solid rgb(90, 90, 90);
+      border-radius: 20px;
+      font-size: 27px;
+      background-color: rgb(32, 106, 93);
+      color: rgb(255, 204, 41);
+      font-weight: bold;
+      transition: 0.7s transform ease-in, 0.7s background-color ease-in,
+        0.7s border-radius ease-in;
+      &:hover {
+        background-color: rgb(21, 70, 61);
+        transform: scale(1.1);
+        border-radius: 50px;
+      }
+    }
     &--label {
       color: rgb(32, 106, 93);
       font-weight: bold;
