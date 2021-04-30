@@ -66,4 +66,4 @@ Si te gusta este trabajo, no dudes en **ponerte en contacto con migo**. Pincha e
 
 ## Visita la página 💻:
 
-Y por último, para ver la página, pincha en el siguiente enlace:
+Y por último, para ver la página, pincha en el siguiente enlace: [Padel paradise](https://camilla-bachna.github.io/padel-tournament-organization/#/ 'Padel paradise').
