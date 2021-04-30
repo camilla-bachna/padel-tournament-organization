@@ -43,8 +43,8 @@ function App() {
       </main>
       <footer className="footer">
         <small className="footer__note">
-          Esta aplicación está diseñada para ayudarte a encontrar el cortejo
-          adecuado. Sólo tienes que elegir tu nombre de usuario, añadir el pin
+          Esta aplicación está diseñada para ayudarte a encontrar la pista
+          correcta. Sólo tienes que elegir tu nombre de usuario, añadir el pin
           del pozo y elegir el género. Ya estaría :)
         </small>
       </footer>
