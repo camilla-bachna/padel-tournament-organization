@@ -1,15 +1,38 @@
-function Form() {
+import react, { useState } from 'react';
+
+function Form(props) {
+  // state
+
+  const [player, setPlayer] = useState('');
+
+  // events
+
+  const handlePlayer = (ev) => {
+    setPlayer(ev.target.value);
+  };
+
+  //prevent default submit
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+    props.handleLogin({
+      player: player,
+    });
+  };
+
   return (
-    <form className="main__form">
-      <button className="main__form--new">Crea un nuevo juego</button>
-      <label htmlFor="user" className="main__form--label">
-        Usario
+    <form className="main__form" onSubmit={handleSubmit}>
+      <button className="main__form--new">Crea un nuevo pozo</button>
+      <label htmlFor="player" className="main__form--label">
+        Jugador *
       </label>
       <input
         type="text"
-        id="user"
+        id="player"
         className="main__form--input"
         placeholder="elige cualquier nombre de usuario"
+        value={player}
+        onChange={handlePlayer}
+        required
       />
       <label htmlFor="match" className="main__form--label">
         Pin
@@ -18,7 +41,7 @@ function Form() {
         type="text"
         id="match"
         className="main__form--input"
-        placeholder="añade el pin del Juego"
+        placeholder="añade el pin del pozo"
       />
       <label htmlFor="gender" className="main__form--label">
         Género

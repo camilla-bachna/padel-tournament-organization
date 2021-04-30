@@ -1,26 +1,25 @@
 {
-  "name": "my-app",
+  "homepage": "./",
+  "name": "my-react-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.1",
+    "animate.css": "^4.1.1",
     "node-sass": "^5.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.1"
+    "react-scripts": "4.0.2",
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "PORT=3001 react-scripts start",
+    "docs": "react-scripts build && rm -rf ../server/public/ && mv build/ ../server/public/",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "docs": "rm -rf docs && ./node_modules/.bin/gulp docs",
-		"push-docs": "rm -rf docs && gulp docs && git add docs/* && git commit -m \"Update docs\" && git push",
-		"deploy": "npm run push-docs"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
