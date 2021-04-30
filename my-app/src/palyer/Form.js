@@ -35,13 +35,14 @@ function Form(props) {
         required
       />
       <label htmlFor="match" className="main__form--label">
-        Pin
+        Pin *
       </label>
       <input
         type="text"
         id="match"
         className="main__form--input"
         placeholder="añade el pin del pozo"
+        required
       />
       <label htmlFor="gender" className="main__form--label">
         Género
