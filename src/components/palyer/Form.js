@@ -1,15 +1,7 @@
 import react, { useState } from 'react';
 
 function Form(props) {
-  // state
-
-  const [player, setPlayer] = useState('');
-
   // events
-
-  const handlePlayer = (ev) => {
-    setPlayer(ev.target.value);
-  };
 
   const handleGender = (event) => {
     props.handleSelect(event.target.name, event.target.value);
@@ -20,7 +12,7 @@ function Form(props) {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     props.handleLogin({
-      player: player,
+      player: props.player,
     });
   };
 
@@ -37,8 +29,8 @@ function Form(props) {
         pattern="^[a-zA-Z0-9]{1,20}$"
         title="May contain letters and/or numbers"
         placeholder="elige cualquier nombre de usuario"
-        value={player}
-        onChange={handlePlayer}
+        value={props.player}
+        onChange={props.handlePlayer}
         required
       />
       <label htmlFor="match" className="main__form--label">

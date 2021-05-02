@@ -8,18 +8,23 @@ function App() {
   //state
 
   const localStoragePlayer = localStorage.get('player');
+  const [player, setPlayer] = useState('');
   const [playerId, setPlayerId] = useState(localStoragePlayer.playerId || '');
   const [gender, setGender] = useState('choose');
   const [loginError, setLoginError] = useState({});
 
   //events: player
 
+  const handlePlayer = (event) => {
+    setPlayer(event.target.value);
+  };
+
   const handleLogin = () => {
     const fakeServerData = {
       playerId: '12',
     };
     setPlayerId(fakeServerData.playerId);
-    localStorage.set('user', fakeServerData);
+    localStorage.set('player', fakeServerData);
   };
   const handleLogout = () => {
     localStorage.remove('player');
@@ -49,7 +54,9 @@ function App() {
           handleLogin={handleLogin}
           handleLogout={handleLogout}
           handleSelect={handleSelect}
+          handlePlayer={handlePlayer}
           gender={gender}
+          player={player}
         />
       </main>
       <footer className="footer">

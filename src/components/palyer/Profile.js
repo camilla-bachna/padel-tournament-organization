@@ -9,7 +9,7 @@ const Profile = (props) => {
 
   return (
     <section className="profile">
-      <h4 className="profile__heading">Bienvenida jugardor</h4>
+      <h4 className="profile__heading">Bienvenido {props.player}</h4>
       <p className="profile__paragraph">
         Por favor, selecciona si has ganado o perdido este partido:
       </p>

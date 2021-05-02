@@ -10,6 +10,8 @@ const Login = (props) => {
         handleLogin={props.handleLogin}
         gender={props.gender}
         handleSelect={props.handleSelect}
+        handlePlayer={props.handlePlayer}
+        player={props.player}
       />
     </section>
   );
