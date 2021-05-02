@@ -23,7 +23,7 @@ function App() {
   };
   const handleLogout = () => {
     localStorage.remove('player');
-    window.location.reload();
+    window.location.reload(); //method to refresh a page
   };
 
   //select gender

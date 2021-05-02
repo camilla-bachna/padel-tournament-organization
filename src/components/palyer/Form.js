@@ -34,6 +34,8 @@ function Form(props) {
         type="text"
         id="player"
         className="main__form--input"
+        pattern="^[a-zA-Z0-9]{1,20}$"
+        title="May contain letters and/or numbers"
         placeholder="elige cualquier nombre de usuario"
         value={player}
         onChange={handlePlayer}
@@ -46,6 +48,8 @@ function Form(props) {
         type="text"
         id="match"
         className="main__form--input"
+        pattern="^[0-9]{1,500}$"
+        title="May only contain numbers"
         placeholder="añade el pin del pozo"
         required
       />
