@@ -151,6 +151,46 @@
   }
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+  &__heading {
+    color: rgb(32, 106, 93);
+    font-weight: bold;
+    font-size: 35px;
+    margin: 10px 0 50px 0;
+  }
+  &__paragraph {
+    color: rgb(32, 106, 93);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+  }
+  &__select {
+    width: 6%;
+    height: 5vh;
+    margin: 10px;
+    border: 4px solid rgb(90, 90, 90);
+    border-radius: 6px;
+    font-size: 19px;
+  }
+  &__button {
+    width: 12%;
+    height: 5vh;
+    margin: 20px 0 3.5px 0;
+    border: 4px solid rgb(90, 90, 90);
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
+    font-weight: bold;
+  }
+}
+
 footer {
   display: flex;
   flex-direction: column;

@@ -1,7 +1,7 @@
 /* import { Route, Switch } from 'react-router-dom'; */
 import React, { useState, useEffect } from 'react';
 import '../stylesheets/App.scss';
-import Player from '../palyer/Player';
+import Player from './palyer/Player';
 import localStorage from '../services/localStorage';
 
 function App() {
