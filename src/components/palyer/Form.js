@@ -11,7 +11,12 @@ function Form(props) {
     setPlayer(ev.target.value);
   };
 
-  //prevent default submit
+  const handleGender = (event) => {
+    props.handleSelect(event.target.name, event.target.value);
+  };
+
+  //preventDefault for form
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
     props.handleLogin({
@@ -50,9 +55,11 @@ function Form(props) {
       <select
         name="gender"
         id="gender"
-        value="gender"
+        value={props.gender}
+        onChange={handleGender}
         className="main__form--select"
       >
+        <option value="choose">elige</option>
         <option value="male">Hombre</option>
         <option value="female">Mujer</option>
       </select>

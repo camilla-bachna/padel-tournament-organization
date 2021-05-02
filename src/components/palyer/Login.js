@@ -6,7 +6,11 @@ const Login = (props) => {
 
   return (
     <section>
-      <Form handleLogin={props.handleLogin} />
+      <Form
+        handleLogin={props.handleLogin}
+        gender={props.gender}
+        handleSelect={props.handleSelect}
+      />
     </section>
   );
 };

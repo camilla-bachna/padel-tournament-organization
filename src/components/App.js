@@ -9,6 +9,7 @@ function App() {
 
   const localStoragePlayer = localStorage.get('player');
   const [playerId, setPlayerId] = useState(localStoragePlayer.playerId || '');
+  const [gender, setGender] = useState('choose');
   const [loginError, setLoginError] = useState({});
 
   //events: player
@@ -25,6 +26,14 @@ function App() {
     window.location.reload();
   };
 
+  //select gender
+
+  const handleSelect = (inputKey, inputValue) => {
+    if (inputKey === 'gender') {
+      setGender(inputValue);
+    }
+  };
+
   //render
 
   return (
@@ -39,6 +48,8 @@ function App() {
           loginError={loginError}
           handleLogin={handleLogin}
           handleLogout={handleLogout}
+          handleSelect={handleSelect}
+          gender={gender}
         />
       </main>
       <footer className="footer">
