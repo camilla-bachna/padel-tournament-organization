@@ -66,7 +66,7 @@ function Form(props) {
             <option value="female">Mujer</option>
           </select>
           <button type="submit" className="main__form--button">
-            Go
+            A jugar
           </button>
         </form>
       </Switch>
