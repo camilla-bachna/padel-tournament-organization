@@ -52,8 +52,8 @@
     width: 100%;
     height: 85vh;
     animation: main__form 3s ease-out;
-    &--new {
-      width: 15%;
+    &--newButton {
+      width: 250px;
       height: 6vh;
       margin: -40px 0 3.5px 0;
       border: 4px solid rgb(90, 90, 90);
@@ -148,6 +148,48 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.newTournament {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85vh;
+  &__heading {
+    color: rgb(32, 106, 93);
+    font-weight: bold;
+    font-size: 35px;
+    margin: 10px 0 50px 0;
+  }
+  &__button {
+    width: 200px;
+    height: 6vh;
+    margin: 20px 0 3.5px 0;
+    border: 4px solid rgb(90, 90, 90);
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
+    font-weight: bold;
+  }
+  &__paragraph {
+    color: rgb(32, 106, 93);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+  }
+  &__container {
+    width: 110px;
+    height: 90px;
+    border: 4px solid rgb(32, 106, 93);
+    border-radius: 20px;
+    margin: 15px;
+  }
+  &__comment {
+    color: rgb(32, 106, 93);
   }
 }
 

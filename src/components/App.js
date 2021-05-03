@@ -1,8 +1,9 @@
-/* import { Route, Switch } from 'react-router-dom'; */
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import '../stylesheets/App.scss';
-import Player from './palyer/Player';
 import localStorage from '../services/localStorage';
+import Player from './palyer/Player';
+import NewTournament from './tournament/New';
 
 function App() {
   //state
@@ -48,16 +49,23 @@ function App() {
       </header>
       <main className="main">
         <div className="main__image"></div>
-        <Player
-          isPlayerLoggedIn={!!playerId}
-          loginError={loginError}
-          handleLogin={handleLogin}
-          handleLogout={handleLogout}
-          handleSelect={handleSelect}
-          handlePlayer={handlePlayer}
-          gender={gender}
-          player={player}
-        />
+        <Switch>
+          <Route path="/newTournament">
+            <NewTournament />
+          </Route>
+          <Route exact path="/">
+            <Player
+              isPlayerLoggedIn={!!playerId}
+              loginError={loginError}
+              handleLogin={handleLogin}
+              handleLogout={handleLogout}
+              handleSelect={handleSelect}
+              handlePlayer={handlePlayer}
+              gender={gender}
+              player={player}
+            />
+          </Route>
+        </Switch>
       </main>
       <footer className="footer">
         <small className="footer__note">
