@@ -1,6 +1,6 @@
 # Organización de torneos de pádel :tennis:
 
-![Welcome](/src/images/padel_welcome.png)
+![Welcome](/web/src/images/padel_welcome.png)
 
 La aplicación permite organizar pozos de pádel; está diseñada para ayudar a encontrar la pista correcta en un pozo de pádel y en general hacer más fácil los preparativos del torneo.
 
@@ -39,17 +39,17 @@ Se abrirá una ventana del explorador y ya podrás usar la aplicación.
 
 ## Las distintas partes de la aplicación son:
 
-![Welcome](/src/images/welcome.png)
+![Welcome](/web/src/images/welcome.png)
 
 ### Crea un nuevo pozo:
 
-![Create new tournament](/src/images/create_tournament.png)
+![Create new tournament](/web/src/images/create_tournament.png)
 
 El usuario puede pulsar en el botón "Crea un nuevo pozo". Así va a recibir un pin que el resto de jugadores puede usar para apuntarse. También tendrá que añadir las pistas que haya reservado.
 
 ### Login - A jugar:
 
-![Profile](/src/images/profile.png)
+![Profile](/web/src/images/profile.png)
 
 En la página de bienvenida tiene otro botón "A jugar" que permite hacer login a otros jugadores que tengan un pin de partido. Para ellos deben escribir un nombre de usuario y añadir el pin del pozo. Además para los pozos mixtos deben elegir el género. Así de fácil pueden unirse al pozo.
 
