@@ -1,0 +1,17 @@
+[
+    {"idPlayer": "1",
+    "player": "Edu", 
+    "pin": "1"},
+    {"idPlayer": "2",
+    "player": "Cami", 
+    "pin": "1"},
+    {"idPlayer": "3",
+    "player": "Tom",
+    "pin": "1"},
+    {"idPlayer": "4",
+    "player": "Maria",
+    "pin": "2"},
+    {"idPlayer": "5",
+    "player": "Fernando",
+    "pin": "2"}
+]

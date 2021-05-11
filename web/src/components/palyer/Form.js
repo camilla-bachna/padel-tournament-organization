@@ -13,6 +13,7 @@ function Form(props) {
     ev.preventDefault();
     props.handleLogin({
       player: props.player,
+      pin: props.pin,
     });
   };
 
@@ -33,7 +34,7 @@ function Form(props) {
             id="player"
             className="main__form--input"
             pattern="^[a-zA-Z0-9]{1,20}$"
-            title="May contain letters and/or numbers"
+            title="Puede contener letras y/o números"
             placeholder="elige cualquier nombre de usuario"
             value={props.player}
             onChange={props.handlePlayer}
@@ -47,8 +48,10 @@ function Form(props) {
             id="match"
             className="main__form--input"
             pattern="^[0-9]{1,500}$"
-            title="May only contain numbers"
+            title="Sólo puede contener números"
             placeholder="añade el pin del pozo"
+            value={props.pin}
+            onChange={props.handlePin}
             required
           />
           <label htmlFor="gender" className="main__form--label">
@@ -68,6 +71,10 @@ function Form(props) {
           <button type="submit" className="main__form--button">
             A jugar
           </button>
+          <span className="main__form--errorMessage">
+            {props.loginError.message}
+          </span>
+          {/* message for pin not found */}
         </form>
       </Switch>
     </>

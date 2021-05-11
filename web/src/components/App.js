@@ -4,15 +4,25 @@ import '../stylesheets/App.scss';
 import localStorage from '../services/localStorage';
 import Player from './palyer/Player';
 import NewTournament from './tournament/New';
+import api from '../services/api';
 
 function App() {
   //state
 
   const localStoragePlayer = localStorage.get('player');
   const [player, setPlayer] = useState('');
+  const [pin, setPin] = useState('');
   const [playerId, setPlayerId] = useState(localStoragePlayer.playerId || '');
   const [gender, setGender] = useState('choose');
   const [loginError, setLoginError] = useState({});
+  //const [userList, setUserList] = useState([]);
+
+  //effects
+  /*  useEffect(() => {
+    api.getUsers().then((data) => {
+      setUserList(data);
+    });
+  }, []); */
 
   //events: player
 
@@ -20,15 +30,24 @@ function App() {
     setPlayer(event.target.value);
   };
 
-  const handleLogin = () => {
-    const fakeServerData = {
-      playerId: '12',
-    };
-    setPlayerId(fakeServerData.playerId);
-    localStorage.set('player', fakeServerData);
+  const handlePin = (event) => {
+    setPin(event.target.value);
   };
+
+  const handleLogin = (userData) => {
+    console.log(userData);
+    api.sendLogin(userData).then((data) => {
+      if (data.error === false) {
+        setPlayerId(data.playerId);
+        localStorage.set('player', data);
+      } else {
+        setLoginError(data);
+      }
+    });
+  };
+
   const handleLogout = () => {
-    localStorage.remove('player');
+    localStorage.remove('player'); //delete data from local storage
     window.location.reload(); //method to refresh a page
   };
 
@@ -55,14 +74,17 @@ function App() {
           </Route>
           <Route exact path="/">
             <Player
-              isPlayerLoggedIn={!!playerId}
+              isPlayerLoggedIn={!!playerId} //if string: empty, its falsy => player not logged in, if not empty, its truthy => player logged in:
+              //isPlayerLoggedIn={playerId !== ''}
               loginError={loginError}
               handleLogin={handleLogin}
               handleLogout={handleLogout}
               handleSelect={handleSelect}
               handlePlayer={handlePlayer}
+              handlePin={handlePin}
               gender={gender}
               player={player}
+              pin={pin}
             />
           </Route>
         </Switch>

@@ -11,7 +11,10 @@ const Login = (props) => {
         gender={props.gender}
         handleSelect={props.handleSelect}
         handlePlayer={props.handlePlayer}
+        handlePin={props.handlePin}
         player={props.player}
+        pin={props.pin}
+        loginError={props.loginError}
       />
     </section>
   );
