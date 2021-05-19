@@ -34,7 +34,7 @@ app.post('/api/user/login', (req, res) => {
     // if user doesnt exist return error
     console.log('error');
     res.status(404).json({
-      error: 'player-not-found',
+      error: 'match-not-found',
       message: 'Juego no encontrado. Por favor, inténtalo de nuevo',
     });
   }

@@ -22,6 +22,7 @@ const Profile = (props) => {
         <option value="won">Ganado</option>
         <option value="lost">Perdido</option>
       </select>
+      <button className="profile__confirmation">Confirme</button>
       <button className="profile__button" onClick={handleLogout}>
         Cerrar la sesión
       </button>

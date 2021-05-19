@@ -20,22 +20,35 @@
   border-bottom: 2px solid white;
   &__heading {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
+    @media all and (min-width: 768px) {
+      font-size: 28px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 40px;
+    }
   }
 }
 
 .main {
   background-color: rgb(32, 106, 93);
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   background-image: url('../images/ball.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: 700px 700px;
+  background-size: 400px 400px;
+  @media all and (min-width: 768px) {
+    background-size: 570px 570px;
+    height: 85vh;
+  }
+  @media all and (min-width: 1200px) {
+    background-size: 700px 700px;
+  }
   &__image {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     right: 50%;
     bottom: 50%;
@@ -43,6 +56,14 @@
     opacity: 0;
     background-color: rgb(255, 255, 77);
     animation: main__image 2s ease-in;
+    @media all and (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 50px;
+      height: 50px;
+    }
   }
   &__form {
     display: flex;
@@ -50,17 +71,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 85vh;
+    height: 80vh;
     animation: main__form 3s ease-out;
+    @media all and (min-width: 768px) {
+      height: 85vh;
+    }
     &--newButton {
       width: 250px;
       height: 6vh;
-      margin: -40px 0 3.5px 0;
+      margin: -40px 0 40px 0;
+      padding-bottom: 40px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 20px;
       font-size: 25px;
-      background-color: rgb(32, 106, 93);
-      color: rgb(255, 204, 41);
+      background-color: rgb(255, 204, 41);
+      color: rgb(32, 106, 93);
       font-weight: bold;
       transition: 0.7s transform ease-in, 0.7s background-color ease-in,
         0.7s border-radius ease-in;
@@ -69,38 +94,78 @@
         transform: scale(1.1);
         border-radius: 50px;
       }
+      @media all and (min-width: 768px) {
+        width: 240px;
+        height: 5vh;
+        margin-top: 40px;
+        padding-bottom: 36px;
+        background-color: rgb(32, 106, 93);
+        color: rgb(255, 204, 41);
+        margin: 0 0 6px 0;
+      }
+      @media all and (min-width: 1200px) {
+        width: 250px;
+        height: 6vh;
+      }
     }
     &--label {
       color: rgb(32, 106, 93);
       font-weight: bold;
-      font-size: 35px;
+      font-size: 25px;
       margin: 5px;
+      @media all and (min-width: 768px) {
+        font-size: 30px;
+        margin: 3px;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 35px;
+        margin: 5px;
+      }
     }
     &--input {
-      width: 25%;
-      height: 7vh;
-      margin: 5px;
+      width: 250px;
+      height: 40px;
+      margin: 3px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 6px;
-      font-size: 19px;
+      font-size: 15px;
+      @media all and (min-width: 768px) {
+        font-size: 17px;
+        width: 330px;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 19px;
+        margin: 5px;
+        width: 340px;
+      }
     }
     &--select {
-      width: 6%;
-      height: 5vh;
-      margin: 3.5px;
+      width: 90px;
+      height: 6vh;
+      margin: 3px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 6px;
-      font-size: 19px;
+      font-size: 15px;
+      @media all and (min-width: 768px) {
+        font-size: 17px;
+        width: 100px;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 19px;
+        margin: 5px;
+        width: 110px;
+      }
     }
     &--button {
-      width: 12%;
-      height: 6vh;
-      margin: 20px 0 3.5px 0;
+      width: 125px;
+      height: 40px;
+      margin: 35px 0 3.5px 0;
+      padding-bottom: 40px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 20px;
-      font-size: 30px;
-      background-color: rgb(32, 106, 93);
-      color: rgb(255, 204, 41);
+      font-size: 25px;
+      background-color: rgb(255, 204, 41);
+      color: rgb(32, 106, 93);
       font-weight: bold;
       transition: 0.7s transform ease-in, 0.7s background-color ease-in,
         0.7s border-radius ease-in;
@@ -108,6 +173,16 @@
         background-color: rgb(21, 70, 61);
         transform: scale(1.1);
         border-radius: 50px;
+      }
+      @media all and (min-width: 768px) {
+        width: 100px;
+        height: 10px;
+        margin: 12px 0 3.5px 0;
+        background-color: rgb(32, 106, 93);
+        color: rgb(255, 204, 41);
+      }
+      @media all and (min-width: 1200px) {
+        width: 120px;
       }
     }
     &--errorMessage {
@@ -163,46 +238,80 @@
   width: 100%;
   height: 85vh;
   &__heading {
-    color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
     font-weight: bold;
-    font-size: 35px;
-    margin: 10px 0 50px 0;
+    font-size: 25px;
+    margin-bottom: 45px;
+    @media all and (min-width: 768px) {
+      font-size: 33px;
+      margin: 10px 0 20px 0;
+      color: rgb(32, 106, 93);
+    }
   }
   &__button {
     width: 200px;
-    height: 6vh;
-    margin: 20px 0 3.5px 0;
+    height: 50px;
+    margin: 10px 0 3.5px 0;
     border: 4px solid rgb(90, 90, 90);
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 22px;
     background-color: rgb(32, 106, 93);
     color: rgb(255, 204, 41);
     font-weight: bold;
+    @media all and (min-width: 768px) {
+      margin: 20px 0 3.5px 0;
+      font-size: 25px;
+    }
   }
   &__paragraph {
     color: rgb(32, 106, 93);
+    width: 240px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
     margin: 15px;
+    @media all and (min-width: 768px) {
+      font-size: 25px;
+      width: 390px;
+    }
   }
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 110px;
-    height: 90px;
-    border: 4px solid rgb(32, 106, 93);
+    width: 85px;
+    height: 65px;
+    border: 4px solid rgb(255, 204, 41);
     border-radius: 20px;
-    color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
     font-size: 35px;
     font-weight: bold;
-    margin: 15px;
+    margin-top: 35px;
+    @media all and (min-width: 768px) {
+      color: rgb(32, 106, 93);
+      border: 4px solid rgb(32, 106, 93);
+      width: 90px;
+      height: 70px;
+      margin: 8px 0 18px 0;
+    }
+    @media all and (min-width: 1200px) {
+      width: 110px;
+      height: 90px;
+      margin: 15px;
+    }
   }
   &__comment {
     color: rgb(32, 106, 93);
+    width: 180px;
+    @media all and (min-width: 768px) {
+    }
   }
   &__link {
-    color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
+    margin-top: 2px;
+    @media all and (min-width: 1200px) {
+      margin-top: 75px;
+      font-size: 20px;
+    }
   }
 }
 
@@ -216,33 +325,61 @@
   &__heading {
     color: rgb(32, 106, 93);
     font-weight: bold;
-    font-size: 35px;
-    margin: 10px 0 50px 0;
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    @media all and (min-width: 768px) {
+      font-size: 35px;
+      margin: 10px 0 50px 0;
+    }
   }
   &__paragraph {
     color: rgb(32, 106, 93);
     font-weight: bold;
-    font-size: 20px;
-    margin: 15px;
+    font-size: 18px;
+    width: 300px;
+    margin: 12px;
+    @media all and (min-width: 768px) {
+      font-size: 20px;
+      width: 400px;
+    }
   }
   &__select {
-    width: 6%;
-    height: 5vh;
+    width: 100px;
+    height: 40px;
     margin: 10px;
     border: 4px solid rgb(90, 90, 90);
     border-radius: 6px;
     font-size: 19px;
+    @media all and (min-width: 768px) {
+      width: 130px;
+    }
+  }
+  &__confirmation {
+    width: 120px;
+    height: 40px;
+    margin: 8px 0 3px 0;
+    border: 4px solid rgb(90, 90, 90);
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: rgb(32, 106, 93);
+    color: rgb(255, 204, 41);
   }
   &__button {
-    width: 12%;
-    height: 5vh;
-    margin: 20px 0 3.5px 0;
+    width: 210px;
+    height: 40px;
+    margin: 30px 0 3.5px 0;
     border: 4px solid rgb(90, 90, 90);
     border-radius: 20px;
     font-size: 25px;
-    background-color: rgb(32, 106, 93);
-    color: rgb(255, 204, 41);
+    background-color: rgb(255, 204, 41);
+    color: rgb(32, 106, 93);
     font-weight: bold;
+    @media all and (min-width: 768px) {
+      background-color: rgb(32, 106, 93);
+      color: rgb(255, 204, 41);
+      margin: 20px 0 3.5px 0;
+    }
   }
 }
 
@@ -254,9 +391,15 @@ footer {
   background-color: rgb(32, 106, 93);
   color: white;
   width: 100%;
-  height: 5vh;
+  height: 10vh;
   border-top: 2px solid white;
+  @media all and (min-width: 768px) {
+    height: 5vh;
+  }
   &__note {
-    font-size: 30px;
+    font-size: 10px;
+    @media all and (min-width: 768px) {
+      font-size: 30px;
+    }
   }
 }
