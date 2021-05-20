@@ -39,19 +39,31 @@ Se abrirá una ventana del explorador y ya podrás usar la aplicación.
 
 ## Las distintas partes de la aplicación son:
 
-![Welcome](/web/src/images/welcome.png)
+### Landing:
+
+![Landing](/web/src/images/landing.png)
+
+En la página de bienvenida hay dos botónes. El usuario puede elegir entre crear un nuevo pozo, pulsando el botón "Crea un nuevo pozo" o unirse a un pozo pulsando el botón "Únete a un pozo".
 
 ### Crea un nuevo pozo:
 
 ![Create new tournament](/web/src/images/create_tournament.png)
 
-El usuario puede pulsar en el botón "Crea un nuevo pozo". Así va a recibir un pin que el resto de jugadores puede usar para apuntarse. También tendrá que añadir las pistas que haya reservado.
+Aqui va a recibir un pin que el resto de jugadores puede usar para apuntarse. También tendrá que añadir las pistas que haya reservado.
 
 ### Login - A jugar:
 
+Si el usuario ha pulsado "Únete a un pozo" verá la siguiente página:
+
+![Login](/web/src/images/login.png)
+
+El botón "A jugar" permite hacer login a otros jugadores que tengan un pin de partido. Para ellos deben escribir un nombre de usuario y añadir el pin del pozo. Además para los pozos mixtos deben elegir el género. Así de fácil pueden unirse al pozo.
+
+### Área personal:
+
 ![Profile](/web/src/images/profile.png)
 
-En la página de bienvenida tiene otro botón "A jugar" que permite hacer login a otros jugadores que tengan un pin de partido. Para ellos deben escribir un nombre de usuario y añadir el pin del pozo. Además para los pozos mixtos deben elegir el género. Así de fácil pueden unirse al pozo.
+Pulsando el botón "A jugar" los usuarios serán redirigidos a su área personal, donde tienen que seleccionar si han ganado o perdido la partida.
 
 ### Pozos
 
@@ -65,7 +77,7 @@ Trabajo en curso. Pronto tendréis la funcionalidad completa!
 
 ## Contacto 🖋
 
-Si te gusta este trabajo, no dudes en **ponerte en contacto conmigo**. Pincha en los enlaches para acceder a:
+Si te gusta este trabajo, no dudes en **ponerte en contacto conmigo**. Pincha en los enlaces para acceder a:
 
 - [mi cuenta de LinkedIn](https://www.linkedin.com/in/camilla-bachna)
 - [mi perfil de GitHub](https://github.com/camilla-bachna)
