@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import '../stylesheets/App.scss';
 import localStorage from '../services/localStorage';
+import Landing from './Landing';
 import Player from './palyer/Player';
 import NewTournament from './tournament/New';
 import api from '../services/api';
@@ -69,10 +70,13 @@ function App() {
       <main className="main">
         <div className="main__image"></div>
         <Switch>
-          <Route path="/newTournament">
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/newTournament">
             <NewTournament />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/joinTournament">
             <Player
               isPlayerLoggedIn={!!playerId} //if string: empty, its falsy => player not logged in, if not empty, its truthy => player logged in:
               //isPlayerLoggedIn={playerId !== ''}

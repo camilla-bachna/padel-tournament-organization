@@ -46,6 +46,63 @@
   @media all and (min-width: 1200px) {
     background-size: 700px 700px;
   }
+  &__landing {
+    &--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 80vh;
+      animation: main__annimation 3s ease-out;
+      @media all and (min-width: 768px) {
+        height: 85vh;
+      }
+    }
+    &--paragraph {
+      color: rgb(32, 106, 93);
+      width: 240px;
+      font-weight: bold;
+      font-size: 19px;
+      margin: 10px;
+      @media all and (min-width: 768px) {
+        font-size: 22px;
+        width: 390px;
+        margin-bottom: 20px;
+      }
+    }
+    &--button {
+      width: 240px;
+      height: 40px;
+      margin-bottom: 10px;
+      padding-bottom: 40px;
+      border: 4px solid rgb(90, 90, 90);
+      border-radius: 20px;
+      font-size: 25px;
+      background-color: rgb(32, 106, 93);
+      color: rgb(255, 204, 41);
+      font-weight: bold;
+      transition: 0.7s transform ease-in, 0.7s background-color ease-in,
+        0.7s border-radius ease-in;
+      &:hover {
+        background-color: rgb(21, 70, 61);
+        transform: scale(1.1);
+        border-radius: 50px;
+      }
+      @media all and (min-width: 768px) {
+        width: 250px;
+        height: 50px;
+        padding-bottom: 36px;
+        background-color: rgb(32, 106, 93);
+        color: rgb(255, 204, 41);
+        margin: 10px;
+      }
+      @media all and (min-width: 1200px) {
+        width: 250px;
+        height: 50px;
+      }
+    }
+  }
   &__image {
     width: 30px;
     height: 30px;
@@ -72,47 +129,14 @@
     align-items: center;
     width: 100%;
     height: 80vh;
-    animation: main__form 3s ease-out;
+    animation: main 3s ease-out;
     @media all and (min-width: 768px) {
       height: 85vh;
-    }
-    &--newButton {
-      width: 250px;
-      height: 6vh;
-      margin: -40px 0 40px 0;
-      padding-bottom: 40px;
-      border: 4px solid rgb(90, 90, 90);
-      border-radius: 20px;
-      font-size: 25px;
-      background-color: rgb(255, 204, 41);
-      color: rgb(32, 106, 93);
-      font-weight: bold;
-      transition: 0.7s transform ease-in, 0.7s background-color ease-in,
-        0.7s border-radius ease-in;
-      &:hover {
-        background-color: rgb(21, 70, 61);
-        transform: scale(1.1);
-        border-radius: 50px;
-      }
-      @media all and (min-width: 768px) {
-        width: 240px;
-        height: 5vh;
-        margin-top: 40px;
-        padding-bottom: 36px;
-        background-color: rgb(32, 106, 93);
-        color: rgb(255, 204, 41);
-        margin: 0 0 6px 0;
-      }
-      @media all and (min-width: 1200px) {
-        width: 250px;
-        height: 6vh;
-      }
     }
     &--label {
       color: rgb(32, 106, 93);
       font-weight: bold;
       font-size: 25px;
-      margin: 5px;
       @media all and (min-width: 768px) {
         font-size: 30px;
         margin: 3px;
@@ -122,15 +146,22 @@
         margin: 5px;
       }
     }
+    &--labelPlayer {
+      margin-top: 45px;
+      @media all and (min-width: 768px) {
+        margin-top: 75px;
+      }
+    }
     &--input {
-      width: 250px;
+      width: 240px;
       height: 40px;
-      margin: 3px;
+      margin: 2px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 6px;
       font-size: 15px;
       @media all and (min-width: 768px) {
         font-size: 17px;
+        margin: 7px;
         width: 330px;
       }
       @media all and (min-width: 1200px) {
@@ -141,13 +172,14 @@
     }
     &--select {
       width: 90px;
-      height: 6vh;
-      margin: 3px;
+      height: 40px;
+      margin: 2px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 6px;
       font-size: 15px;
       @media all and (min-width: 768px) {
         font-size: 17px;
+        margin: 7px;
         width: 100px;
       }
       @media all and (min-width: 1200px) {
@@ -157,15 +189,15 @@
       }
     }
     &--button {
-      width: 125px;
-      height: 40px;
-      margin: 35px 0 3.5px 0;
-      padding-bottom: 40px;
+      width: 100px;
+      height: 10px;
+      margin: 5px 0 3.5px 0;
+      padding-bottom: 30px;
       border: 4px solid rgb(90, 90, 90);
       border-radius: 20px;
-      font-size: 25px;
-      background-color: rgb(255, 204, 41);
-      color: rgb(32, 106, 93);
+      font-size: 20px;
+      background-color: rgb(32, 106, 93);
+      color: rgb(255, 204, 41);
       font-weight: bold;
       transition: 0.7s transform ease-in, 0.7s background-color ease-in,
         0.7s border-radius ease-in;
@@ -175,19 +207,35 @@
         border-radius: 50px;
       }
       @media all and (min-width: 768px) {
-        width: 100px;
-        height: 10px;
+        width: 120px;
+        height: 20px;
         margin: 12px 0 3.5px 0;
-        background-color: rgb(32, 106, 93);
-        color: rgb(255, 204, 41);
+        padding-bottom: 35px;
+        font-size: 23px;
       }
       @media all and (min-width: 1200px) {
-        width: 120px;
+        width: 130px;
+        height: 40px;
+        margin-top: 25px;
+        font-size: 28px;
+        padding-bottom: 40px;
       }
     }
     &--errorMessage {
       color: red;
       font-weight: bold;
+    }
+    &--link {
+      color: rgb(255, 204, 41);
+      margin-top: 10px;
+      @media all and (min-width: 768px) {
+        margin-top: 60px;
+        font-size: 20px;
+      }
+      @media all and (min-width: 1200px) {
+        margin-top: 80px;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -219,7 +267,7 @@
   }
 }
 
-@keyframes main__form {
+@keyframes main__annimation {
   0% {
     opacity: 0;
     transform: translateY(-1000px);
@@ -258,6 +306,13 @@
     background-color: rgb(32, 106, 93);
     color: rgb(255, 204, 41);
     font-weight: bold;
+    transition: 0.7s transform ease-in, 0.7s background-color ease-in,
+      0.7s border-radius ease-in;
+    &:hover {
+      background-color: rgb(21, 70, 61);
+      transform: scale(1.1);
+      border-radius: 50px;
+    }
     @media all and (min-width: 768px) {
       margin: 20px 0 3.5px 0;
       font-size: 25px;
