@@ -33,7 +33,7 @@
 .main {
   background-color: rgb(32, 106, 93);
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background-image: url('../images/ball.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -41,7 +41,6 @@
   background-size: 400px 400px;
   @media all and (min-width: 768px) {
     background-size: 570px 570px;
-    height: 85vh;
   }
   @media all and (min-width: 1200px) {
     background-size: 700px 700px;
@@ -53,11 +52,8 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 80vh;
+      height: 85vh;
       animation: main__annimation 3s ease-out;
-      @media all and (min-width: 768px) {
-        height: 85vh;
-      }
     }
     &--paragraph {
       color: rgb(32, 106, 93);
@@ -128,11 +124,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     animation: main 3s ease-out;
-    @media all and (min-width: 768px) {
-      height: 85vh;
-    }
     &--label {
       color: rgb(32, 106, 93);
       font-weight: bold;
@@ -292,14 +285,17 @@
     margin-bottom: 45px;
     @media all and (min-width: 768px) {
       font-size: 33px;
-      margin: 10px 0 20px 0;
+      margin: 5px 0 5px 0;
       color: rgb(32, 106, 93);
+    }
+    @media all and (min-width: 1200px) {
+      margin-top: 40px;
     }
   }
   &__button {
     width: 200px;
     height: 50px;
-    margin: 10px 0 3.5px 0;
+    margin: 5px 0 3.5px 0;
     border: 4px solid rgb(90, 90, 90);
     border-radius: 20px;
     font-size: 22px;
@@ -314,19 +310,43 @@
       border-radius: 50px;
     }
     @media all and (min-width: 768px) {
-      margin: 20px 0 3.5px 0;
+      margin: 10px 0 3.5px 0;
       font-size: 25px;
     }
   }
-  &__paragraph {
+  &__paragraphPushButton {
     color: rgb(32, 106, 93);
     width: 240px;
     font-weight: bold;
-    font-size: 19px;
-    margin: 15px;
+    font-size: 18px;
+    margin-top: 25px;
     @media all and (min-width: 768px) {
       font-size: 25px;
       width: 390px;
+      margin-top: 10px;
+    }
+  }
+  &__paragraphPin {
+    color: rgb(32, 106, 93);
+    width: 240px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+    @media all and (min-width: 768px) {
+      font-size: 25px;
+      width: 390px;
+    }
+  }
+  &__paragraphCourts {
+    color: rgb(255, 204, 41);
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    @media all and (min-width: 768px) {
+      color: rgb(32, 106, 93);
+      width: 390px;
+      margin-top: 0px;
+      margin-bottom: 10px;
     }
   }
   &__container {
@@ -340,13 +360,14 @@
     color: rgb(255, 204, 41);
     font-size: 35px;
     font-weight: bold;
-    margin-top: 35px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     @media all and (min-width: 768px) {
       color: rgb(32, 106, 93);
       border: 4px solid rgb(32, 106, 93);
       width: 90px;
       height: 70px;
-      margin: 8px 0 18px 0;
+      margin-top: 5px;
     }
     @media all and (min-width: 1200px) {
       width: 110px;
@@ -357,15 +378,35 @@
   &__comment {
     color: rgb(32, 106, 93);
     width: 180px;
-    @media all and (min-width: 768px) {
-    }
   }
   &__link {
     color: rgb(255, 204, 41);
-    margin-top: 2px;
     @media all and (min-width: 1200px) {
       margin-top: 75px;
       font-size: 20px;
+    }
+  }
+}
+
+.form__courts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: 1200px) {
+    width: 230px;
+  }
+  &--input {
+    margin: 5px;
+    width: 40px;
+    height: 30px;
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 6px;
+    @media all and (min-width: 768px) {
+      width: 50px;
+      height: 40px;
+      border: 4px solid rgb(90, 90, 90);
     }
   }
 }
@@ -439,21 +480,23 @@
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: hidden;
   background-color: rgb(32, 106, 93);
-  color: white;
+  color: rgb(32, 106, 93);
   width: 100%;
-  height: 10vh;
+  height: 5vh;
   border-top: 2px solid white;
   @media all and (min-width: 768px) {
-    height: 5vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__note {
-    font-size: 10px;
+    display: hidden;
     @media all and (min-width: 768px) {
+      display: inline-block;
       font-size: 30px;
     }
   }
