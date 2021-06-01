@@ -82,6 +82,3 @@ Si te gusta este trabajo, no dudes en **ponerte en contacto conmigo**. Pincha en
 - [mi cuenta de LinkedIn](https://www.linkedin.com/in/camilla-bachna)
 - [mi perfil de GitHub](https://github.com/camilla-bachna)
 
-## Visita la página 💻:
-
-Y por último, para ver la página, pincha en el siguiente enlace: [Padel paradise](https://camilla-bachna.github.io/padel-tournament-organization/#/ 'Padel paradise').
